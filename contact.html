@@ -51,6 +51,12 @@
                     <small class="far fa-envelope-open me-2"></small>
                     <small>novaacsolutions@gmail.com</small>
                 </div>
+                <div>
+                    <a href="https://wa.me/9605937616?text=Hello%20I%20need%20assistance%20with%20your%20services." target="_blank">
+                        <button>Chat with us on WhatsApp</button>
+                    </a>
+                    
+                </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <ol class="breadcrumb justify-content-end mb-0">
@@ -68,7 +74,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0"><img class="img-fluid me-3" src="img/icon/logo.png" alt="">Novaac Solutions</h1>
+            <h3 class="m-0"><img class="img-fluid me-3 logo" src="img/icon/logo.png" alt=""></h3>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -79,14 +85,7 @@
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="service.html" class="nav-item nav-link">Our Services</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light border-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+                     <a href="feature.html" class="nav-item nav-link">Our Features</a>
                 </div>
                 <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
             </div>
@@ -123,35 +122,52 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <h1 class="display-6 mb-5">If You Have Any Query, Please Contact Us</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <p class="mb-4">Whether you need a new AC unit, maintenance service, or a bulk
+                        quotation, Novaac Solutions is here to help. Contact us today to discuss your HVAC needs and
+                        receive a free consultation.</p>
+                    <form action="https://formspree.io/f/mdkogwkg" method="POST" onsubmit="resetForm()">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="customerName"
+                                                name="customer_name" placeholder="Customer Name" required>
+                                            <label for="customerName">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="customerEmail"
+                                        name="customer_email" placeholder="Customer Email" required>
+                                    <label for="customerEmail">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
+                                    <input type="tel" class="form-control" id="customerMobile"
+                                        name="customer_mobile" placeholder="Mobile Number" required
+                                        pattern="[0-9]{10}" title="Please enter a 10-digit mobile number">
+
+                                    <label for="customerMobile">Your Mobile</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
+                                    <input type="text" class="form-control" id="serviceType" name="service_type"
+                                        placeholder="Service Type" required>
+                                    <label for="serviceType">Service Type</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here"
+                                        id="customerMessage" name="customer_message"
+                                        style="height: 80px"></textarea>
+                                    <label for="customerMessage">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Get A Free
+                                    Quote</button>
                             </div>
                         </div>
                     </form>
@@ -167,6 +183,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Contact End -->
 
 
